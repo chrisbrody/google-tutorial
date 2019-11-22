@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- character set -->
+  <meta charset="utf-8">
+  <!-- title -->
+  <title>Tutorial: Google Replication</title>
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- prism css syntax highlighter -->
+  <link rel="stylesheet" href="css/prism.css">
+  <!-- custom css -->
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body class="line-numbers">
+
+  <!-- HTML content goes below here -->
+  <div class="container">
+
+    <!-- WALKTHROUGH GUIDE TO BUILDING REPLICA -->
+    <div id="walkthrough" class="box9">
+
+      <!-- WEBSITE HEADER -->
+      <header>
+        <h1 class="title">Tutorial: Google Replication</h1>
+        <hr>
+      </header>
+
+      <!-- BEFORE WE START -->
+      <div id="before-we-start">
+        <h2>Before We Start the Tutorial</h2>
+        <p>We will build a replica of the google.com homepage during this tutorial.  The techniques you’ll learn in the tutorial are fundamental to building any website, and mastering it will give you a deep understanding of HTML &amp; CSS.</p>
+        <p>The tutorial is divided into several sections:</p>
+        <ul>
+          <li>
+            <a href="#setup-for-the-tutorial">Setup for the Tutorial</a> will give you a starting point to follow the tutorial.
+          </li>
+          <li>
+            <a href="#overview">Overview</a> will teach you the fundamentals of HTML elements &amp; CSS styles.
+          </li>
+          <li>
+            <a href="#navigation">Completing the Website</a> will teach you the most common techniques in Web development.
+          </li>
+        </ul>
+        <p>You don’t have to complete all of the sections at once to get the value out of this tutorial. Try to get as far as you can — even if it’s one or two sections.</p>
+
+        <!-- WHAT ARE WE BUILDING -->
+        <h3 id="what-are-we-building">What Are We Building</h3>
+        <p>In this tutorial, we’ll show how to build the Google website with search bar and all.</p>
+
+        <p>You can see what we’ll be building here: <a href="#" download>Final Result</a>. If the code doesn’t make sense to you, or if you are unfamiliar with the code’s syntax, don’t worry! The goal of this tutorial is to help you understand React and its syntax.</p>
+
+        <p>We recommend that you check out the Google  replica before continuing with the tutorial. There are three sections we will be building: Navigation, Search Bar &amp; Footer.</p>
+
+        <p>You can close the Google replica once you’re familiar with it. We’ll be starting from a simpler template in this tutorial. Our next step is to set you up so that you can start building the website.</p>
+        
+        <!-- PREREQUISITES -->
+        <h3 id=prerequisites>Prerequisites</h3>
+        <p>
+          We’ll assume that you have a little to no familiarity with HTML and CSS.<br>
+          In this tutorial, we are using <br>
+          <span class="underline">HTML elements:</span> a, br, button, div, img, li, span, ul <br>
+          <span class="underline">CSS properties:</span> background,  border, color, cursor, display, float, font-size, font-weight, height, list-style, margin, padding, position, text-decoration, width
+        </p>
+
+        <p>If you'd like to know more HTML, we recommend reading this <a href="https://htmldog.com/guides/html/beginner/" target="_blank">HTML guide</a>  If you'd like to know more CSS, we recommend reading this <a href="https://htmldog.com/guides/css/beginner/" target="_blank">CSS guide</a></p>  
+
+      </div> <!-- /BEFORE WE START -->
+
+      <hr>
+
+      <!-- SETUP FOR THE TUTORIAL -->
+      <div id="setup-for-the-tutorial">
+        <h2>Setup For The Tutorial</h2>
+        <p>You need to have your <a href="#">text editor</a> and your <a href="#">browser</a> open to begin this project.  If you dont have them on your computer, please download and install them now.</p>
+
+        <!-- DOWNLOAD THE CODE -->
+        <h3 id="download-the-code">Project Code</h3>
+        <p>Now <a href="#">Download This Code Template</a>, unzip and move it to your desktop</p>
+        <img src="" alt="how to download and unzip project files">
+        
+        <!-- OPEN TEMPLATE IN EDITOR -->
+        <h3 id="open-template-in-editor">Open Template In A Text Editor</h3>
+        <p>Open your text editor and drag the whole project into the editor, this will allow you to access all the files included in the project.</p>
+        <img src="" alt="how to open the project in text editor">
+        
+        <!-- OPEN TEMPLATE IN BROWSER -->
+        <h3 id="open-template-in-browser">Open Template In A Browser</h3>
+        <p>Open your web browser and drag the index.html file into a tab, this will allow you to view the project in the browser.</p>
+        <img src="" alt="how to open the index.html file in broswer">
+
+        <!-- INSPECTION THE STARTER CODE -->
+        <h3 id="inspecting-the-starter-code">Inspecting The Starter Code</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti commodi nam quas unde, odit distinctio nesciunt rem totam eius, id, ullam ex quasi reiciendis veritatis. Dolorum laboriosam alias provident, necessitatibus?</p>
+
+        <!-- DEVELOPER TOOLS -->
+        <h3 id="developer-tools">Developer Tools</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis qui accusamus, nihil aspernatur est odit eius, mollitia dolorum nemo tenetur molestiae assumenda, amet rerum itaque, soluta harum nisi dignissimos aperiam!</p>
+      </div> <!-- /SETUP-FOR-THE-TUTORIAL -->
+
+      <hr>
+
+      <!-- OVERVIEW -->
+      <div id="overview">
+        <h2>Overview</h2>
+        <p>Now that you’re set up, let’s get an overview of HTML and CSS!</p>
+
+        <!-- WHAT IS HTML -->
+        <h3 id="what-is-html">What Is HTML?</h3>
+        <p>HTML is a syntax we use to display words and images on a website.  Don't worry if you aren't 100% familiar with all of this, you will learn as you go along.</p>
+        <ul>
+          <li>Use angle brackets to make HTML elements. <code>&lt;p&gt; &amp; &lt;/p&gt;</code></li>
+          <li>Add content inside the opening and closing tags to display words. <code>&lt;p&gt;Paragraph Text Here&lt;/p&gt;</code></li>
+          <li>Elements require both an opening and closing tag, otherwise it wont get displayed properly, as above.</li>
+          <li>However, two elements that are in this tutorial require only the opening tag. A.K.A. a void tag <code>&lt;img&gt; &amp; &lt;br&gt;</code> Images will require an additional attribute to display an image and the br is just a line break.</li>
+          <li>
+            I can't stress enough the importance of writing out each opening and closing tags correctly. Here is an example of elements opening and closing tags we will use in the tutorial
+            <ul>
+              <li>
+                &lt;a&gt; &lt;/a&gt;
+              </li>
+              <li>
+                &lt;br&gt;
+              </li>
+              <li>
+                &lt;button&gt; &lt;/button&gt;
+              </li>
+              <li>
+                &lt;img&gt;
+              </li>
+              <li>
+                &lt;li&gt; &lt;/li&gt;
+              </li>
+              <li>
+                &lt;span&gt; &lt;/span&gt;
+              </li>
+              <li>
+                &lt;ul&gt; &lt;/ul&gt;
+              </li>
+            </ul>
+          </li>
+        </ul>
+        
+        <!-- WHAT IS CSS -->
+        <h3 id="what-is-css">What Is CSS?</h3>
+        <p>We use CSS to style our websites using <span>Selectors</span> (choosing HTML elements to style) and then assign <span>Property:Value;</span> pairs to give style to the selected HTML.  Don't worry if you aren't 100% familiar with this, you will learn as you go along.</p>
+        <ul>
+          <li>Whereas HTML has tags, CSS has selectors. Selectors are the names given to styles in internal and external style sheets.</li>
+          <li>There are many CSS selectors we can use to style HTML, we will focus on two types in this tutorial: Element Selector and Child Selector</li>
+          <li>For each selector there are “properties” inside curly brackets, which simply take the form of words such as color, font-weight or background-color.</li>
+          <li>A value is given to the property following a colon (NOT an “equals” sign). Semi-colons are used to separate the properties. <code>e.g. body{ color:tomato; }</code></li>
+        </ul>
+      </div> <!-- /OVERVIEW -->
+
+      <hr>
+
+      <!-- WEBSITE HEAD -->
+      <div id="website-head">
+        <h2>Website Head</h2>
+        <p>In the <code>&lt;head&gt;&lt;/head&gt;</code> of an HTML document we include tags so the broswer can use them to improve user experience. Link a title or and icon for a page, or to include a .css file so we can add style to the site. </p>        
+        <p>Below are the necessary updates you need to make to the index.html file.</p>
+        <ul>
+          <li>on the 1st link, set href attribute to "<code>favicon.ico</code>"</li>
+          <li>add content to the website <code>title</code> element</li>
+          <li>on the last link, set href attribute to link to "<code>main.css</code>"</li>
+        </ul>
+        <pre data-line="4,6,10"> Your index.html file should look like this when you're done.
+          <code class="language-html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;!-- WEBSITE ICON --&gt;
+    &lt;link rel="shortcut icon" href="favicon.ico"&gt;
+    &lt;!-- WEBSITE TITLE --&gt;
+    &lt;title&gt;Google&lt;/title&gt;
+    &lt;!-- FONT AWESOME ICON CSS - check out fontawesome.com --&gt;
+    &lt;script src="https://use.fontawesome.com/349da334fb.js"&gt;&lt;/script&gt;
+    &lt;!-- CUSTOM CSS --&gt;
+    &lt;link rel="stylesheet" type="text/css" href="css/main.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        
+      </div> <!-- /WEBSITE HEAD -->
+
+      <hr>
+
+      <!-- WEBSITE NAVIGATION -->
+      <div id="navigation">
+        <h2>Website Navigation</h2>
+        <p>Finally, it's time to code!  We are going to start inside the <code>&lt;body&gt;</code> tag in index.html and add the necessary code to recreate the Google homepage navigation.</p>
+       
+        <!-- NAVIGATION HTML -->
+        <h3 id="navigation-html">Navigation HTML</h3>
+        <p>We are going to create a box to contain our nav using a div element, followed by a unordered list with some list items and anchors inside each list item.</p> 
+        <div class="alert alert-success">We strongly recommend typing code by hand as you’re working through the tutorial and not using copy/paste. This will help you develop muscle memory and a stronger understanding.</div>
+        <p>Below are the necessary updates you need to make to the index.html file.</p>
+        <ul>
+          <li>create a <code>div</code> element with a class attibute set to "<code>navigation</code>"</li>
+          <li>inside that div, create a <code>ul</code> element</li> 
+          <li>inside that ul, create 4 <code>li</code> elements each with its own <code>a</code> element nested inside</li>
+          <li>on the 1st anchor element add an href attribute set to "<code>https://mail.google.com/mail/?tab=wm</code>" and the content between the tags to "<code>Gmail</code>"</li>
+          <li>on the 2nd anchor element add an href attribute set to "<code>https://www.google.com/imghp?hl=en</code>" and the content between the tags to "<code>Images</code>"</li>
+          <li>on the 3rd anchor element add an href attribute set to "<code>https://about.google/intl/en/</code>" and the class attribute to "<code>fa fa-th</code>"</li>
+          <li>on the 4th anchor element add an href attribute set to "<code>https://accounts.google.com/SignOutOptions?hl=en</code>"</li>
+          <li>inside the 4th anchor element add an <code>img</code> element, set the class attribute to "<code>profile</code>" and the src attribute to "<code>img/chris.jpg</code>"</li>
+        </ul>
+        
+        <pre data-line="7-24"> Your index.html file should look like this when you're done.
+          <code class="language-html">&lt;html&gt;
+  &lt;head&gt;...unchanged&lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;div class="navigation"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;a href="https://mail.google.com/mail/?tab=wm"&gt;Gmail&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href="https://www.google.com/imghp?hl=en"&gt;Images&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href="https://about.google/intl/en/" class="fa fa-th"&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href="https://accounts.google.com/SignOutOptions?hl=en"&gt;
+            &lt;img class="profile" src="img/chris.jpg"&gt;
+          &lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <!-- NAVIGATION CSS -->
+        <h3 id="navigation-css">Navigation CSS</h3>
+        <p>We are going to add some styles to our navigation as well as some site styles (this allows a site to look the same on most browsers)</p> 
+        <div class="alert alert-success">We strongly recommend typing code by hand as you’re working through the tutorial and not using copy/paste. This will help you develop muscle memory and a stronger understanding.</div>
+        <p>Below are the necessary updates you need to make to the main.css file.  We will start with sitewide styles</p>
+        <ol>
+          <li>select all elements (<code>*</code>) 
+            <ul>
+              <li>add a color of <code>#000</code></li>
+            </ul>
+          </li>
+          <li>select the body element (<code>body</code>)
+            <ul>
+              <li>add a color of <code>#222</code></li>
+              <li>add a margin of <code>0</code></li>
+            </ul>
+          </li>
+          <li>select all the anchor elements (<code>a</code>)
+            <ul>
+              <li>add a color of <code>#222</code></li>
+              <li>add a text-decoration of <code>none</code></li>
+            </ul> 
+          </li>
+          <li>select all the anchor pseduo hover elements (<code>a:hover</code>) (what happens when a user hovers over a link) 
+            <ul>
+              <li>add a color of <code>#222</code></li>
+              <li>add a text-decoration of <code>underline</code></li>
+            </ul> 
+          </li>
+        </ol>
+        <pre data-line="2-16">Your main.css file should look like this when you're done. 
+          <code class="language-css">/** SITE STYLES **/
+* {
+  color: #000;
+}
+body {
+  color: #222;
+  margin: 0;
+}
+a {
+  color: #222;
+  text-decoration: none;
+}
+a:hover {
+  color: #222;
+  text-decoration: underline;
+}
+
+/** SITE NAVIGATION **/</code></pre>
+        <p>With those sitewide styles out of the way we can move on to the navigation styles.  Below are the necessary updates you need to add to the main.css file.</p>
+        <ol>
+          <li>select all <code>div</code> elements with a class of navigation (<code>div.navigation{}</code>) 
+            <ul>
+              <li>add a height of <code>75px</code></li>
+            </ul>
+          </li>
+          <li>select all <code>ul</code> elements inside any <code>div</code> elements with a class of navigation  (<code>div.navigation ul{}</code>)
+            <ul>
+              <li>add a float of <code>right</code></li>
+              <li>add a margin-right of <code>25px</code></li>
+              <li>add a margin-top of <code>0</code></li>
+            </ul>
+          </li>
+          <li>select all <code>li</code> elements inside any <code>div</code> elements with a class of navigation (<code>div.navigation li{}</code>)  
+            <ul>
+              <li>add a display of <code>inline-block</code></li>
+              <li>add a font-size of <code>13px</code></li>
+              <li>add a margin of <code>5px 5px 0 0</code></li>
+              <li>add a padding of <code>5px 10px 0 0</code></li>
+              <li>add a vertical-align of <code>bottom</code></li>
+            </ul>
+          </li>
+          <li>select all <code>a</code> elements inside any <code>div</code> elements with a class of navigation (<code>div.navigation a{}</code>) 
+            <ul>
+              <li>add a color of <code>#626065</code></li>
+              <li>add a font-size of <code>14px</code></li>
+            </ul>
+          </li>
+          <li>select all the anchor pseduo hover elements inside any <code>div</code> elements with a class of navigation (<code>div.navigation a:hover{}</code>)
+            <ul>
+              <li>add a color of <code>#000</code></li>
+            </ul> 
+          </li>
+          <li>select all elements with a class of <code>fa</code> (<code>.fa{}</code>)
+            <ul>
+              <li>add a cursor of <code>default</code></li>
+              <li>add a font-size of <code>16px !important</code></li>
+              <li>add a opacity of <code>0.7</code></li>
+              <li>add a vertical-align of <code>top</code></li>
+            </ul> 
+          </li>
+          <li>select all the pseduo hover elements with a class of <code>fa</code> (<code>.fa:hover{}</code>)
+            <ul>
+              <li>add a cursor of <code>pointer</code></li>
+              <li>add a opacity of <code>1</code></li>
+            </ul> 
+          </li>
+          <li>select all elements with a class of <code>profile</code> (<code>.profile{}</code>)
+            <ul>
+              <li>add a border-radius of <code>25px</code></li>
+              <li>add a height of <code>32px</code></li>
+              <li>add a position of <code>relative</code></li>
+              <li>add a width of <code>32px</code></li>
+            </ul> 
+          </li>
+        </ol>
+        <pre data-line="8-51">Your main.css file should look like this when you're done. 
+          <code class="language-css">/** SITE STYLES **/
+...
+a:hover {
+  color: #222;
+  text-decoration: underline;
+}
+
+/** SITE NAVIGATION **/
+div.navigation {
+  height: 75px;
+}
+div.navigation ul {
+  float: right;
+  margin-right: 25px;
+  margin-top: 0;
+}
+div.navigation  li {
+  display: inline-block;
+  font-size: 13px;
+  margin: 5px 5px 0 0;
+  padding: 5px 10px 0 0;
+  vertical-align: bottom;
+}
+div.navigation a {
+  color: #626065;
+  font-size: 14px;
+}
+div.navigation a:hover {
+  color: black;
+}
+
+/** NAVIGATION ICONS **/
+.fa {
+  cursor: default;
+  font-size: 16px !important;
+  opacity: 0.7;
+  vertical-align: top;
+}
+.fa:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+/** PROFILE IMAGE **/
+.profile {
+  border-radius: 25px;
+  height: 32px;
+  position: relative;
+  top: 10px;
+  width: 32px;
+}</code></pre>
+        
+      </div><!-- /WEBSITE NAVIGATION -->
+
+      <hr>
+
+      <!-- WEBSITE SEARCH BAR -->
+      <div id="website-search-bar">
+        <h2>Website Search Bar</h2>
+        <p>Now we move on to the middle of the website, this includes the search bar and buttons.</p>
+
+        <!-- SEARCH BAR HTML -->
+        <h3 id="search-bar-html">Search Bar HTML</h3>
+        <p>We are going to create a box to wrap this search just as we did with thte navigation, followed two boxes to contain the image, and buttons separately and last an input for our search bar.</p>
+        <p>Below are the necessary updates you need to make to the index.html file.</p>
+        <ul>
+          <li>create a <code>div</code> element with a class attribute set to "<code>cta</code>"</li>
+          <li>inside that div, create another <code>div</code> element with a class attibute set to "<code>logo</code>", an <code>input</code> element and another <code>div</code> element with a class attibute set to "<code>search</code>"</li>
+          <li>inside the <code>div</code> with <code>class="logo"</code>, create an <code>img</code> element, set the src attribute to "<code>img/google.png</code>" and the alt attribute to "<code>Google Logo</code>"</li>
+          <li>on the <code>input</code> element, set the type attribute to "<code>text</code>" and the placeholder attribute to "<code>Search Google or type a URL</code>" and add the autofocus attrbute</li>
+          <li>inside the <code>div</code> with <code>class="search"</code>, create two <code>button</code> elements,</li>
+          <li>add the text content of "<code>Google Search</code>" to the first button and the text content of "<code>I'm Feeling Lucky</code>"" to the second button</li>
+        </ul>
+        <pre data-line="7-16"> Your index.html should look like this when you're done.
+          <code class="language-html">&lt;html&gt;
+  &lt;head&gt;...unchanged&lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;div class="navigation"&gt;...unchanged&lt;/div&gt;
+
+    &lt;div class="cta"&gt;
+      &lt;div class="logo"&gt;
+        &lt;img src="img/google.png" alt="google logo"&gt;
+      &lt;/div&gt;
+      &lt;input type="text" placeholder="Search Google or type a URL" autofocus&gt;
+      &lt;div class="search"&gt;
+        &lt;button&gt;Google Search&lt;/button&gt;
+        &lt;button&gt;I'm Feeling Lucky&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+        
+        <!-- SEARCH BAR CSS -->
+        <h3 id="search-bar-css">Search Bar CSS</h3>
+        <p>Moving on the the search bar CSS,</p>
+        <p>Below are the necessary updates you need to make to the main.css file.  We will start with sitewide styles</p>
+        <ol>
+          <li>select all elements with a class of <code>cta</code> (<code>.cta{}</code>)
+            <ul>
+              <li>add a height of <code>365px</code></li>
+              <li>add a margin-top of <code>150px</code></li>
+            </ul>
+          </li>
+          <li>select all elements with a class of <code>logo</code> (<code>.logo{}</code>)
+            <ul>
+              <li>add a text-align of <code>center</code></li>
+            </ul>
+          </li>
+          <li>select all <code>input</code> elements inside any element with a class of <code>cta</code> (<code>.cta input{}</code>)
+            <ul>
+              <li>add a border of <code>1px solid #d9d9d9</code></li>
+              <li>add a display of <code>block</code></li>
+              <li>add a font-size of <code>16</code></li>
+              <li>add a height of <code>30px</code></li>
+              <li>add a margin of <code>0 auto</code></li>
+              <li>add a padding of <code>5px</code></li>
+              <li>add a width of <code>45%</code></li>
+            </ul>
+          </li>
+          <li>select all elements with a class of <code>search</code> (<code>.search{}</code>)
+            <ul>
+              <li>add a text-align of <code>center</code></li>
+            </ul>
+          </li>
+          <li>select all <code>button</code> elements inside any element with a class of <code>search</code> (<code>.search button{}</code>)
+            <ul>
+              <li>add a background-color of <code>#f5f5f5</code></li>
+              <li>add a border of <code>1px solid rgba(0, 0, 0, 0.1</code></li>
+              <li>add a border-radius of <code>2px</code></li>
+              <li>add a color of <code>gray</code></li>
+              <li>add a cursor of <code>pointer</code></li>
+              <li>add a font-size of <code>14px</code></li>
+              <li>add a font-weight of <code>bold</code></li>
+              <li>add a margin of <code>17px 6px</code></li>
+              <li>add a padding of <code>10px 15px</code></li>
+            </ul>
+          </li>
+          <li>select all <code>pseudo:hover</code> <code>button</code> elements inside any element with a class of <code>search</code> (<code>.search button:hover{}</code>)
+            <ul>
+              <li>add a background-color of <code>#f8f8f8</code></li>
+              <li>add a border of <code>1px solid #c6c6c6</code></li>
+              <li>add a color of <code>#333</code></li>
+            </ul>
+          </li>
+        </ol>
+        <pre data-line="11-48"> Your main.css file should look like this when you're done.
+          <code class="language-css">...
+/** PROFILE IMAGE **/
+.profile {
+  border-radius: 25px;
+  height: 32px;
+  position: relative;
+  top: 10px;
+  width: 32px;
+}
+
+/** CTA GOOGLE LOGO **/
+.cta {
+  height: 364px;
+  margin-top: 150px;
+}
+.cta .logo {
+  text-align: center;
+}
+.cta input {
+  border: 1px solid #d9d9d9;
+  display: block;
+  font-size: 16px;
+  height: 30px;
+  margin: 0 auto;
+  padding: 5px;
+  width: 45%;
+}
+
+/** GOOGLE SEARCH **/
+.search {
+  text-align: center;
+}
+.search button {
+  background-color: #f5f5f5;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  color: gray;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 17px 6px;
+  padding: 10px 15px;
+}
+.search button:hover {
+  background-color:#f8f8f8;
+  border: 1px solid #c6c6c6;
+  color:#333;
+}</code></pre>
+      </div> <!-- /WEBSITE SEARCH BAR -->
+
+      <hr>
+
+      <!-- WEBSITE FOOTER -->
+      <div id="website-footer">
+        <h2>Website Footer</h2>
+        <p>On to the last part of the website, the bottom footer links!</p>
+
+        <!-- FOOTER HTML -->
+        <h3 id="footer-html">Footer HTML</h3>
+        <p>We are going to craete one last box with two unordered lists inside. Like our navigation before we will add list item elements with anchor elements inside of each and then add content and links. </p>
+        <p>Below are the necessary updates you need to make to the index.html file.</p>
+        <ul>
+          <li>create a <code>div</code> element with a class attibute set to "<code>footer</code>"</li>
+          <li>inside that div, create two <code>ul</code> elements - the first with a class attibute set to "<code>left</code>" - the second with a class attibute set to "<code>right</code>"</li> 
+          <li>inside each ul, create three <code>li</code> elements each with its own <code>a</code> element nested inside</li>
+          <li>on the 1st anchor element, inside left, add an href attribute set to "<code>https://www.google.com/intl/en/ads/?fg=1</code>" and the content between the tags to "<code>Advertising</code>"</li>
+          <li>on the 2nd anchor element, inside left, add an href attribute set to "<code>https://www.google.com/services/?fg=1</code>" and the content between the tags to "<code>Business</code>"</li>
+          <li>on the 3rd anchor element, inside left, add an href attribute set to "<code>https://www.google.com/intl/en/about.html?fg=1</code>" and the class attribute to "<code>About</code>"</li>
+
+          <li>on the 1st anchor element, inside right, add an href attribute set to "<code>https://www.google.com/intl/en/policies/privacy/?fg=1</code>" and the content between the tags to "<code>Privacy</code>"</li>  
+          <li>on the 2nd anchor element, inside right, add an href attribute set to "<code>https://www.google.com/intl/en/policies/terms/?fg=1</code>" and the content between the tags to "<code>Terms</code>"</li>  
+          <li>on the 3rd anchor element, inside right, add an href attribute set to "<code>https://www.google.com/preferences?hl=en</code>" and the content between the tags to "<code>Settings</code>"</li>          
+          
+        </ul>
+        <pre data-line="9-32"> Your index.html should look like this when you're done.
+          <code class="language-html">&lt;html&gt;
+  &lt;head&gt;...unchanged&lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;div class="navigation"&gt;...unchanged&lt;/div&gt;
+
+    &lt;div class="cta"&gt;...unchanged&lt;/div&gt;
+
+    &lt;div class="footer"&gt;
+      &lt;ul class="left"&gt;
+        &lt;li&gt;
+          &lt;a href="https://www.google.com/intl/en/ads/?fg=1"&gt;Advertising&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href="https://www.google.com/services/?fg=1"&gt;Business&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href="https://www.google.com/intl/en/about.html?fg=1"&gt;About&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul class="right"&gt;
+        &lt;li&gt;
+          &lt;a href="https://www.google.com/intl/en/policies/privacy/?fg=1"&gt;Privacy&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href="https://www.google.com/intl/en/policies/terms/?fg=1"&gt;Terms&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href="https://www.google.com/preferences?hl=en"&gt;Settings&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        
+        <!-- FOOTER CSS -->
+        <h3 id="footer-css">Footer CSS</h3>
+        <p>Last we finish up with the CSS needed for the footer.</p>
+        <p>Below are the necessary updates you need to make to the main.css file.  We will start with sitewide styles</p>
+        <ol>
+          <li>select all elements with a class of <code>footer</code> (<code>.footer{}</code>)
+            <ul>
+              <li>add a background-color of <code>#f5f5f5</code></li>
+              <li>add a border-top of <code>1px solid #e4e4e4</code></li>
+              <li>add a font-size of <code>10px</code></li>
+              <li>add a height of <code>10px 15px</code></li>
+              <li>add a width of <code>100%</code></li>
+            </ul>
+          </li>
+          <li>select all <code>ul</code> elements with a class of <code>left</code> (<code>.footer ul.left{}</code>) 
+            <ul>
+              <li>add a float of <code>left</code></li>
+            </ul>
+          </li>
+          <li>select all <code>ul</code> elements with a class of <code>right</code> (<code>.footer ul.right{}</code>)  
+            <ul>
+              <li>add a float of <code>right</code></li>
+              <li>add a padding-right of <code>40px</code></li>
+            </ul>
+          </li>
+          <li>select all <code>li</code> elements nested inside any <code>ul</code> element that is nested inside any element with class of <code>footer</code> (<code>.footer ul li{}</code>) 
+            <ul>
+              <li>add a <code>display</code> of <code>inline-block</code></li>
+              <li>add a <code>font-size</code> of <code>13px</code></li>
+              <li>add a <code>margin</code> of <code>5px 5px 0 0</code></li>
+              <li>add a <code>padding</code> of <code>5px 10px 0 0</code></li>
+              <li>add a <code>vertical-align</code> of <code>bottom</code></li>
+            </ul>
+          </li>
+        </ol>
+        <pre data-line="8-29"> Your main.css file should look like this when you're done.
+          <code class="language-css">...
+.search button:hover {
+  background-color:#f8f8f8;
+  border: 1px solid #c6c6c6;
+  color:#333;
+}
+
+/** FOOTER **/
+.footer {
+  background-color: #f5f5f5;
+  border-top: 1px solid #e4e4e4;
+  font-size: 10px;
+  height: 50px;
+  width: 100%;
+}
+.footer ul.left {
+  float: left;
+}
+.footer ul.right{
+  float: right;
+  padding-right: 40px;
+}
+.footer ul li {
+  display: inline-block;
+  font-size: 13px;
+  margin: 5px 5px 0 0;
+  padding: 5px 10px 0 0;
+  vertical-align: bottom;
+}</code></pre>
+      </div> <!-- /WEBSITE SEARCH BAR -->
+
+      
+
+    </div> <!-- WALKTHROUGH -->
+
+    <!-- STEPS TO BUILDING REPLICA MENU -->
+    <div id="tutorial-steps" class="box3">
+      <h5 class="title">TUTORIAL</h5>
+      <ul>
+        <!-- BEFORE WE START -->
+        <li>
+          <a href="#before-we-start">Before We Start the Tutorial</a>
+          <ul>
+            <li>
+              <a href="#what-are-we-building">What Are We Building?</a>
+            </li>
+            <li>
+              <a href="#prerequisites">Prerequisites</a>
+            </li>
+          </ul>
+        </li>
+        <!-- SETUP FOR THE TUTORIAL -->
+        <li>
+          <a href="#setup-for-the-tutorial">Setup For The Tutorial</a>
+          <ul>
+            <li>
+              <a href="#download-the-code">Project Code</a>
+            </li>
+            <li>
+              <a href="#open-template-in-editor">Open Template In A Text Editor</a>
+            </li>
+            <li>
+              <a href="#open-template-in-browser">Open Template In A Browser</a>
+            </li>
+            <li>
+              <a href="#inspecting-the-starter-code">Inspecting the Starter Code</a>
+            </li>
+            <li>
+              <a href="#developer-tools">Developer Tools</a>
+            </li>
+          </ul>
+        </li>
+        <!-- OVERVIEW -->
+        <li>
+          <a href="#overview">Overview</a>
+          <ul>
+            <li>
+              <a href="#what-is-html">What Is HTML?</a>
+            </li>
+            <li>
+              <a href="#what-is-css">What Is CSS?</a>
+            </li>
+          </ul>
+        </li>
+        <!-- WEBSITE HEAD -->
+        <li>
+          <a href="#website-head">Website Head</a>
+        </li>
+        <!-- WEBSITE NAVIGATION -->
+        <li>
+          <a href="#navigation">Website Navigation</a>
+          <ul>
+            <li>
+              <a href="#navigation-html">Navigation HTML</a>
+            </li>
+            <li>
+              <a href="#navigation-css">Navigation CSS</a>
+            </li>
+          </ul>
+        </li>
+        <!-- WEBSITE SEARCH BAR -->
+        <li>
+          <a href="#website-search-bar">Website Search Bar</a>
+          <ul>
+            <li>
+              <a href="#search-bar-html">Search Bar HTML</a>
+            </li>
+            <li>
+              <a href="#search-bar-css">Search Bar CSS</a>
+            </li>
+          </ul>
+        </li>
+        <!-- WEBSITE FOOTER -->
+        <li>
+          <a href="#website-footer">Website Footer</a>
+          <ul>
+            <li>
+              <a href="#footer-html">Footer HTML</a>
+            </li>
+            <li>
+              <a href="#footer-css">Footer CSS</a>
+            </li>
+          </ul>
+        </li>
+        <!-- TUTORIAL CONCLUSION -->
+        <li>
+          <a href="#Conclusion">Conclusion</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- prism js syntax highlighter -->  
+  <script src="js/prism.js"></script>
+  <!-- custom js -->
+  <script src="js/index.js"></script>
+</body>
+</html>
