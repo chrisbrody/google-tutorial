@@ -130,7 +130,9 @@ li.active a{
 	  height:100vh;
 	  overflow: scroll;
 	}
-	#tutorial-steps h5 {
+	#tutorial-steps .title {
+		line-height: 35px;
+		margin-top: 0;
 		padding-left: 20px;
 	}
 	#tutorial-steps ul {
