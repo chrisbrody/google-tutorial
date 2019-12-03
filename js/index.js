@@ -1,1 +1,3 @@
-$('body').scrollspy({ target: '#tutorial-steps' })
+document.getElementById("walkthrough").onscroll = () => {
+	console.log($(this.event.target))
+}
