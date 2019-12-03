@@ -11,6 +11,12 @@ SECTIONS
 3. STEPS TO BUILDING REPLICA MENU
 
 ===================================================*/
+body {
+	position: relative;
+}
+code {
+	color: #c92c2c;
+}
 hr {
 	margin: 30px 0;
 }
@@ -30,6 +36,9 @@ p {
 }
 span.underline {
 	text-decoration: underline;
+}
+li.active a{
+	color: red !important;
 }
 
 /* SECTION 1: FLEX BOX*/

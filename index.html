@@ -48,7 +48,7 @@
         <h3 id="what-are-we-building">What Are We Building</h3>
         <p>In this tutorial, we’ll show how to build the Google website with search bar and all.</p>
 
-        <p>You can see what we’ll be building here: <a href="#" download>Final Result</a>. If the code doesn’t make sense to you, or if you are unfamiliar with the code’s syntax, don’t worry! The goal of this tutorial is to help you understand React and its syntax.</p>
+        <p>You can see what we’ll be building here: <a href="#" target="_blank">Final Result</a>. If the code doesn’t make sense to you, or if you are unfamiliar with the code’s syntax, don’t worry! The goal of this tutorial is to help you understand React and its syntax.</p>
 
         <p>We recommend that you check out the Google  replica before continuing with the tutorial. There are three sections we will be building: Navigation, Search Bar &amp; Footer.</p>
 
@@ -72,30 +72,31 @@
       <!-- SETUP FOR THE TUTORIAL -->
       <div id="setup-for-the-tutorial">
         <h2>Setup For The Tutorial</h2>
-        <p>You need to have your <a href="#">text editor</a> and your <a href="#">browser</a> open to begin this project.  If you dont have them on your computer, please download and install them now.</p>
+        <p>You need to have your <a href="https://www.sublimetext.com/3" target="_blank">text editor</a> and your <a href="https://www.google.com/chrome/" target="_blank">browser</a> open to begin this project.  If you dont have them on your computer, please download and install them now.</p>
 
         <!-- DOWNLOAD THE CODE -->
         <h3 id="download-the-code">Project Code</h3>
-        <p>Now <a href="#">Download This Code Template</a>, unzip and move it to your desktop</p>
-        <img src="" alt="how to download and unzip project files">
+        <p><a href="google.zip" download>Download The Code Template</a>, unzip and move the uncompressed folder to your desktop</p>
+        <video src="video/download.mp4" controls width="100%"></video>
         
         <!-- OPEN TEMPLATE IN EDITOR -->
         <h3 id="open-template-in-editor">Open Template In A Text Editor</h3>
         <p>Open your text editor and drag the whole project into the editor, this will allow you to access all the files included in the project.</p>
-        <img src="" alt="how to open the project in text editor">
+        <video src="video/texteditor.mp4" controls width="100%"></video>
         
         <!-- OPEN TEMPLATE IN BROWSER -->
         <h3 id="open-template-in-browser">Open Template In A Browser</h3>
         <p>Open your web browser and drag the index.html file into a tab, this will allow you to view the project in the browser.</p>
-        <img src="" alt="how to open the index.html file in broswer">
+        <video src="video/openbrowser.mp4" controls width="100%"></video>
 
         <!-- INSPECTION THE STARTER CODE -->
         <h3 id="inspecting-the-starter-code">Inspecting The Starter Code</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti commodi nam quas unde, odit distinctio nesciunt rem totam eius, id, ullam ex quasi reiciendis veritatis. Dolorum laboriosam alias provident, necessitatibus?</p>
+        <p>Using inspect, we can see all the HTML of this website on the left and all the CSS of the selected element on the right. You can use this to see how any websites code looks.</p>
+        <video src="video/inspectcode.mp4" controls width="100%"></video>
 
         <!-- DEVELOPER TOOLS -->
         <h3 id="developer-tools">Developer Tools</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis qui accusamus, nihil aspernatur est odit eius, mollitia dolorum nemo tenetur molestiae assumenda, amet rerum itaque, soluta harum nisi dignissimos aperiam!</p>
+        <p>Inspect element is one of many developer tools you will need in your toolbox. Here are few others to help you on your road to paid code development: <br> <a href="https://www.webfx.com/web-design/color-picker/" target="_blank">Color Picker</a> | <a href="https://resizeimage.net/" target="_blank">Image Resizer</a> | <a href="https://www.canva.com/" target="_blank">Canva Design Tool</a></p>
       </div> <!-- /SETUP-FOR-THE-TUTORIAL -->
 
       <hr>
@@ -160,12 +161,13 @@
         <p>In the <code>&lt;head&gt;&lt;/head&gt;</code> of an HTML document we include tags so the broswer can use them to improve user experience. Link a title or and icon for a page, or to include a .css file so we can add style to the site. </p>        
         <p>Below are the necessary updates you need to make to the index.html file.</p>
         <ul>
-          <li>on the 1st link, set href attribute to "<code>favicon.ico</code>"</li>
+          <li>on the first link, set href attribute to "<code>favicon.ico</code>"</li>
           <li>add content to the website <code>title</code> element</li>
           <li>on the last link, set href attribute to link to "<code>main.css</code>"</li>
         </ul>
-        <pre data-line="4,6,10"> Your index.html file should look like this when you're done.
-          <code class="language-html">&lt;html&gt;
+        <pre data-line="5,7,13">Your index.html file should look like this when you're done.
+          <code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
   &lt;head&gt;
     &lt;!-- WEBSITE ICON --&gt;
     &lt;link rel="shortcut icon" href="favicon.ico"&gt;
@@ -173,8 +175,10 @@
     &lt;title&gt;Google&lt;/title&gt;
     &lt;!-- FONT AWESOME ICON CSS - check out fontawesome.com --&gt;
     &lt;script src="https://use.fontawesome.com/349da334fb.js"&gt;&lt;/script&gt;
+    &lt;!-- NORMALIZE CSS --&gt;
+    &lt;link rel="stylesheet" href="css/normalize.css"&gt;
     &lt;!-- CUSTOM CSS --&gt;
-    &lt;link rel="stylesheet" type="text/css" href="css/main.css"&gt;
+    &lt;link rel="stylesheet" href="css/main.css"&gt;
   &lt;/head&gt;
   &lt;body&gt;
 
@@ -199,16 +203,22 @@
           <li>create a <code>div</code> element with a class attibute set to "<code>navigation</code>"</li>
           <li>inside that div, create a <code>ul</code> element</li> 
           <li>inside that ul, create 4 <code>li</code> elements each with its own <code>a</code> element nested inside</li>
-          <li>on the 1st anchor element add an href attribute set to "<code>https://mail.google.com/mail/?tab=wm</code>" and the content between the tags to "<code>Gmail</code>"</li>
-          <li>on the 2nd anchor element add an href attribute set to "<code>https://www.google.com/imghp?hl=en</code>" and the content between the tags to "<code>Images</code>"</li>
-          <li>on the 3rd anchor element add an href attribute set to "<code>https://about.google/intl/en/</code>" and the class attribute to "<code>fa fa-th</code>"</li>
-          <li>on the 4th anchor element add an href attribute set to "<code>https://accounts.google.com/SignOutOptions?hl=en</code>"</li>
-          <li>inside the 4th anchor element add an <code>img</code> element, set the class attribute to "<code>profile</code>" and the src attribute to "<code>img/chris.jpg</code>"</li>
+          <li>on the first anchor element add an href attribute set to "<code>https://mail.google.com/mail/?tab=wm</code>" and the content between the tags to "<code>Gmail</code>"</li>
+          <li>on the second anchor element add an href attribute set to "<code>https://www.google.com/imghp?hl=en</code>" and the content between the tags to "<code>Images</code>"</li>
+          <li>on the third anchor element add an href attribute set to "<code>https://about.google/intl/en/</code>" and the class attribute to "<code>fa fa-th</code>"</li>
+          <li>on the fourth anchor element add an href attribute set to "<code>https://accounts.google.com/SignOutOptions?hl=en</code>"</li>
+          <li>
+            inside the fourth anchor element add an <code>img</code> element, set the class attribute to "<code>profile</code>" and the src attribute to "<code>img/chris.jpg</code>"
+            <ul>
+              <li>now add a picture of yourself to the img folder, inside the project folder. update the img src to match your file name.  Your picture should be showing up instead of mine.</li>
+            </ul>
+          </li>
         </ul>
         
-        <pre data-line="7-24"> Your index.html file should look like this when you're done.
-          <code class="language-html">&lt;html&gt;
-  &lt;head&gt;...unchanged&lt;/head&gt;
+        <pre data-line="6-23">Your index.html file should look like this when you're done.
+          <code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;...&lt;/head&gt;
 
   &lt;body&gt;
     &lt;div class="navigation"&gt;
@@ -412,12 +422,13 @@ div.navigation a:hover {
           <li>inside the <code>div</code> with <code>class="search"</code>, create two <code>button</code> elements,</li>
           <li>add the text content of "<code>Google Search</code>" to the first button and the text content of "<code>I'm Feeling Lucky</code>"" to the second button</li>
         </ul>
-        <pre data-line="7-16"> Your index.html should look like this when you're done.
-          <code class="language-html">&lt;html&gt;
-  &lt;head&gt;...unchanged&lt;/head&gt;
+        <pre data-line="8-17">Your index.html should look like this when you're done.
+          <code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;...&lt;/head&gt;
 
   &lt;body&gt;
-    &lt;div class="navigation"&gt;...unchanged&lt;/div&gt;
+    &lt;div class="navigation"&gt;...&lt;/div&gt;
 
     &lt;div class="cta"&gt;
       &lt;div class="logo"&gt;
@@ -429,7 +440,6 @@ div.navigation a:hover {
         &lt;button&gt;I'm Feeling Lucky&lt;/button&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
@@ -488,7 +498,7 @@ div.navigation a:hover {
             </ul>
           </li>
         </ol>
-        <pre data-line="11-48"> Your main.css file should look like this when you're done.
+        <pre data-line="11-48">Your main.css file should look like this when you're done.
           <code class="language-css">...
 /** PROFILE IMAGE **/
 .profile {
@@ -554,23 +564,24 @@ div.navigation a:hover {
           <li>create a <code>div</code> element with a class attibute set to "<code>footer</code>"</li>
           <li>inside that div, create two <code>ul</code> elements - the first with a class attibute set to "<code>left</code>" - the second with a class attibute set to "<code>right</code>"</li> 
           <li>inside each ul, create three <code>li</code> elements each with its own <code>a</code> element nested inside</li>
-          <li>on the 1st anchor element, inside left, add an href attribute set to "<code>https://www.google.com/intl/en/ads/?fg=1</code>" and the content between the tags to "<code>Advertising</code>"</li>
-          <li>on the 2nd anchor element, inside left, add an href attribute set to "<code>https://www.google.com/services/?fg=1</code>" and the content between the tags to "<code>Business</code>"</li>
-          <li>on the 3rd anchor element, inside left, add an href attribute set to "<code>https://www.google.com/intl/en/about.html?fg=1</code>" and the class attribute to "<code>About</code>"</li>
+          <li>on the first anchor element, inside the left ul, add an href attribute set to "<code>https://www.google.com/intl/en/ads/?fg=1</code>" and the content between the tags to "<code>Advertising</code>"</li>
+          <li>on the second anchor element, inside the left ul, add an href attribute set to "<code>https://www.google.com/services/?fg=1</code>" and the content between the tags to "<code>Business</code>"</li>
+          <li>on the third anchor element, inside the left ul, add an href attribute set to "<code>https://www.google.com/intl/en/about.html?fg=1</code>" and the class attribute to "<code>About</code>"</li>
 
-          <li>on the 1st anchor element, inside right, add an href attribute set to "<code>https://www.google.com/intl/en/policies/privacy/?fg=1</code>" and the content between the tags to "<code>Privacy</code>"</li>  
-          <li>on the 2nd anchor element, inside right, add an href attribute set to "<code>https://www.google.com/intl/en/policies/terms/?fg=1</code>" and the content between the tags to "<code>Terms</code>"</li>  
-          <li>on the 3rd anchor element, inside right, add an href attribute set to "<code>https://www.google.com/preferences?hl=en</code>" and the content between the tags to "<code>Settings</code>"</li>          
+          <li>on the first anchor element, inside the right ul, add an href attribute set to "<code>https://www.google.com/intl/en/policies/privacy/?fg=1</code>" and the content between the tags to "<code>Privacy</code>"</li>  
+          <li>on the second anchor element, inside the right ul, add an href attribute set to "<code>https://www.google.com/intl/en/policies/terms/?fg=1</code>" and the content between the tags to "<code>Terms</code>"</li>  
+          <li>on the third anchor element, inside the right ul, add an href attribute set to "<code>https://www.google.com/preferences?hl=en</code>" and the content between the tags to "<code>Settings</code>"</li>          
           
         </ul>
-        <pre data-line="9-32"> Your index.html should look like this when you're done.
-          <code class="language-html">&lt;html&gt;
-  &lt;head&gt;...unchanged&lt;/head&gt;
+        <pre data-line="10-33">Your index.html should look like this when you're done.
+          <code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;...&lt;/head&gt;
 
   &lt;body&gt;
-    &lt;div class="navigation"&gt;...unchanged&lt;/div&gt;
+    &lt;div class="navigation"&gt;...&lt;/div&gt;
 
-    &lt;div class="cta"&gt;...unchanged&lt;/div&gt;
+    &lt;div class="cta"&gt;...&lt;/div&gt;
 
     &lt;div class="footer"&gt;
       &lt;ul class="left"&gt;
@@ -634,7 +645,7 @@ div.navigation a:hover {
             </ul>
           </li>
         </ol>
-        <pre data-line="8-29"> Your main.css file should look like this when you're done.
+        <pre data-line="8-29">Your main.css file should look like this when you're done.
           <code class="language-css">...
 .search button:hover {
   background-color:#f8f8f8;
@@ -666,6 +677,12 @@ div.navigation a:hover {
 }</code></pre>
       </div> <!-- /WEBSITE SEARCH BAR -->
 
+      <hr>
+    
+      <div id="conclusion">
+        <h2>Conclusion</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum aperiam quisquam asperiores eveniet est repudiandae distinctio excepturi, obcaecati natus voluptatibus repellat nemo, architecto provident accusantium necessitatibus sequi sint, magnam hic?</p>
+      </div>
       
 
     </div> <!-- WALKTHROUGH -->
@@ -761,12 +778,16 @@ div.navigation a:hover {
         </li>
         <!-- TUTORIAL CONCLUSION -->
         <li>
-          <a href="#Conclusion">Conclusion</a>
+          <a href="#conclusion">Conclusion</a>
         </li>
       </ul>
     </div>
   </div>
 
+  <!-- jquery js  -->  
+  <script src="js/jquery.js"></script>
+  <!-- bootstrap js  -->  
+  <script src="js/bootstrap.js"></script>
   <!-- prism js syntax highlighter -->  
   <script src="js/prism.js"></script>
   <!-- custom js -->
